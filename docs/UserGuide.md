@@ -81,7 +81,9 @@ Format: `help`
 
 Adds a person to the student roster.
 
-Format: `add n/NAME a/STUDENT_NUMBER e/EMAIL m/MOD g/GROUP [t/TAG]…​`
+Format:
+* `add n/NAME a/STUDENT_NUMBER e/EMAIL m/MOD g/GROUP [t/TAG]` or
+* `add n/NAME a/STUDENT_NUMBER e/EMAIL m/MOD [g/GROUP] [t/TAG]` if there exists a default group for the mod.
 
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
@@ -92,6 +94,7 @@ Examples:
 
 * `add n/John Doe a/A1234567L e/johnd@example.com m/CS2030S g/B12G`
 * `add n/Betsy Crowe t/friend e/betsycrowe@example.com m/CS2100 g/T1 p/1234567 t/criminal`
+
 
 
 ### Listing all persons : `list`
@@ -294,7 +297,7 @@ WARNING: This will override the pre-existing data with the new data you entered.
 
 | Action          | Format, Examples                                                                                                                                                   |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Add**         | `add n/NAME a/STUDENT_NUMBER e/EMAIL m/MODULE g/GROUP [t/TAG]…​` <br> e.g., `add n/James Ho a/A1234567Y e/jamesho@example.com m/CS2100 g/W12 t/friend t/colleague` |
+| **Add**         | `add n/NAME a/STUDENT_NUMBER e/EMAIL m/MODULE g/GROUP [t/TAG]…​` or `add n/NAME a/STUDENT_NUMBER e/EMAIL m/MODULE [g/GROUP] [t/TAG]…​` <br> e.g., `add n/James Ho a/A1234567Y e/jamesho@example.com m/CS2100 g/W12 t/friend t/colleague` |
 | **Clear**       | `clear`                                                                                                                                                            |
 | **Delete**      | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                |
 | **Edit**        | `edit INDEX [n/NAME] [a/STUDENT_NUMBER] [e/EMAIL] [m/MODULE] [g/GROUP] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`                             |
